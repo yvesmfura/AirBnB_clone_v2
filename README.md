@@ -1,130 +1,64 @@
 # Airbnb Clone Project
 
 ## Introduction
-This project is a Python-based clone of the popular Airbnb platform. It utilizes SQLAlchemy for database storage and modeling. Below are the key updates and features implemented based on the provided information:
+Welcome to our Airbnb Clone project! This project aims to replicate the functionality of the popular Airbnb platform using Python and SQLAlchemy for database management and modeling. Whether you're a traveler looking for accommodation or a host wanting to list your property, our clone project provides a seamless experience.
 
-```python
-#!/usr/bin/python3
-"""
-0x02 AirBnB clone - MySQL
+## Features
+- **User Management**: Create, update, and delete user accounts.
+- **Property Listing**: Hosts can list their properties with detailed descriptions and amenities.
+- **Reviews**: Guests can leave reviews for properties they've stayed in.
+- **Search Functionality**: Users can search for properties based on location, price, and amenities.
+- **Environment Configuration**: Flexible environment variables for easy configuration.
 
-Project Description: This project is a group effort to develop an AirBnB clone using MySQL as the database backend. The project is implemented in Python and follows Object-Oriented Programming (OOP) principles. It involves working with SQL, specifically MySQL, and utilizing ORM (Object-Relational Mapping) with SQLAlchemy. Environment variables are utilized for configuration, providing flexibility in different environments.
+## Learning Objectives
+By working on this project, you will gain experience in:
+- Implementing Unit Testing in a large project.
+- Utilizing *args and **kwargs effectively in Python.
+- Managing a MySQL database and understanding ORM.
+- Utilizing environment variables for configuration.
 
-...
-Environment Variables
-To configure the project, the following environment variables are utilized:
+## Requirements
+### Python Scripts:
+- Compatible editors: vi, vim, emacs.
+- Interpretation/Compilation on Ubuntu 20.04 LTS using Python 3.8.5.
+- Follow PEP8 styling guidelines using `pycodestyle`.
+- All files must be executable.
+- Use descriptive documentation for modules, classes, and functions.
+- Utilize environment variables for configuration.
 
-python
-Copy code
-HBNB_ENV: Running environment. Can be set to "dev" or "test" for development and testing environments respectively.
-HBNB_MYSQL_USER: MySQL username.
-HBNB_MYSQL_PWD: MySQL password.
-HBNB_MYSQL_HOST: MySQL hostname.
-HBNB_MYSQL_DB: MySQL database name.
-HBNB_TYPE_STORAGE: Type of storage used. Can be set to "file" (using FileStorage) or "db" (using DBStorage).
-Learning Objectives
-Upon completion of this project, you should be able to:
+### Python Unit Tests:
+- Utilize the `unittest` module.
+- Organize test files within a `tests` folder.
+- Execute tests using `python3 -m unittest discover tests`.
 
-Explain Unit testing and implement it in a large project.
-Understand and utilize *args and **kwargs in Python.
-Handle named arguments in functions effectively.
-Create and manage a MySQL database.
-Create a MySQL user and grant privileges.
-Understand ORM and map Python classes to MySQL tables.
-Manage two different storage engines using the same codebase.
-Utilize environment variables effectively for configuration.
-Requirements
-Python Scripts:
-Use editors: vi, vim, emacs.
-All files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5).
-End all files with a new line.
-The first line of all files should be #!/usr/bin/python3.
-Include a README.md file at the root of the project folder.
-Use pycodestyle (version 2.8.*) for code formatting.
-All files must be executable.
-Test file lengths using wc.
-All modules, classes, and functions should have documentation.
-Documentation should be descriptive and not just a single word.
-Python Unit Tests:
-Use editors: vi, vim, emacs.
-All files should end with a new line.
-Place all test files inside a folder named tests.
-Utilize the unittest module.
-Test files should have a .py extension.
-All test files and folders should start with test_.
-Organize test files in a similar structure as the project files.
-Execute all tests using python3 -m unittest discover tests.
-Ensure all modules, classes, and functions have documentation.
-Collaborate on test cases to cover edge cases effectively.
-SQL Scripts:
-Use editors: vi, vim, emacs.
-All files will be executed on Ubuntu 20.04 LTS using MySQL 8.0.
-Use SQLAlchemy version 1.4.x.
-End all files with a new line.
-Add comments before SQL queries.
-Start files with a comment describing the task.
-Use uppercase for all SQL keywords.
-Include a README.md file at the root of the project folder.
-Test file lengths using wc.
-Getting Started
-To get started with this project, follow these steps:
+### SQL Scripts:
+- Executed on Ubuntu 20.04 LTS using MySQL 8.0.
+- Use SQLAlchemy version 1.4.x for Object-Relational Mapping.
+- Follow SQL best practices and conventions.
+- End all files with a new line.
 
-Clone the repository.
-Set up your MySQL database and configure environment variables accordingly.
-Ensure you have the required dependencies installed.
-Start coding!
-Updates Made
-Update User Model
+## Getting Started
+To get started with our Airbnb Clone project, follow these steps:
+1. **Clone the Repository**: `git clone <repository-url>`
+2. **Set Up MySQL Database**: Configure MySQL database settings using environment variables.
+3. **Install Dependencies**: Ensure you have all required dependencies installed.
+4. **Start Coding**: Dive into the code and start building your Airbnb clone!
 
-Added class attributes for email, password, first_name, and last_name.
-Specified constraints such as maximum character length and nullability.
-Implemented creation of User objects with specified attributes.
-Update Place Model
+## Project Structure
+Our project follows a structured approach with models for User, Place, Review, Amenity, and City. Additionally, we have test scripts to ensure the functionality of our project remains intact.
 
-Added class attributes for various place details such as city_id, user_id, name, description, etc.
-Specified constraints and default values for certain attributes.
-Implemented creation of Place objects with specified attributes.
-Update User and City Models
+## Usage
+Here's how you can run the project:
+1. **Clone the Repository**: `git clone <repository-url>`
+2. **Navigate to Project Directory**: `cd airbnb-clone`
+3. **Execute Test Script**: Run `main_place_amenities.py` to demonstrate the Many-to-Many relationship between Place and Amenity.
 
-Established relationships between User and Place, and City and Place models.
-Defined relationships such that when a User or City object is deleted, all linked Place objects are automatically deleted.
-Update Review Model
-
-Added class attributes for text, place_id, and user_id.
-Specified constraints and foreign key relationships.
-Implemented creation of Review objects with specified attributes.
-Update User and Place Models (Continued)
-
-Added or replaced class attributes to establish relationships with the Review model.
-Defined relationships such that when a User object is deleted, all linked Review objects are automatically deleted.
-Update Amenity Model
-
-Added class attributes for name.
-Established a Many-to-Many relationship between Place and Amenity.
-Created a separate table called place_amenity to manage the relationship.
-Implemented the relationship for both DBStorage and FileStorage engines.
-Test Script - main_place_amenities.py
-
-Created a test script to demonstrate the Many-to-Many relationship between Place and Amenity.
-The script creates instances of State, City, User, Place, and Amenity, and establishes relationships between them.
-Project Structure
-The project directory structure includes models for User, Place, Review, Amenity, and City, along with test scripts and a README file.
-
-Database Schema
-The database schema consists of multiple tables representing various entities such as users, places, reviews, amenities, etc. Relationships between these entities are established using foreign keys and Many-to-Many relationships.
-
-Usage
-To run the project:
-
-Clone the repository.
-Navigate to the project directory.
-Execute the test script (main_place_amenities.py) to demonstrate the Many-to-Many relationship between Place and Amenity.
-
-Conclusion: 
-This Airbnb clone project provides a comprehensive demonstration of database storage and modeling techniques using Python and SQLAlchemy. With features such as user management, property listing, reviews, and amenities, the project closely mimics the functionality of the Airbnb platform.
-
-Contributors
+## Contributions
 This project was made possible by the collaborative efforts of our team:
+1. **Twayinganyiki LEONCE**
+2. **Yves IRAKOZE MFURA**
 
-Twayinganyiki LEONCE
-Yves IRAKOZE MFURA
+We welcome contributions from the community to enhance and improve our Airbnb Clone project. Feel free to fork the repository, make changes, and submit pull requests.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
