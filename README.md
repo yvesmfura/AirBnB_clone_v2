@@ -125,3 +125,9 @@ To run the project:
 
 ## Conclusion
 This Airbnb clone project provides a comprehensive demonstration of database storage and modeling techniques using Python and SQLAlchemy. With features such as user management, property listing, reviews, and amenities, the project closely mimics the functionality of the Airbnb platform.
+
+## Contributors
+This project was made possible by the collaborative efforts of our team:
+
+## 1.Twayinganyiki LEONCE
+## 2.Yves IRAKOZE MFURA
