@@ -1,4 +1,4 @@
-# Airbnb Clone Project
+# Airbnb Clone Project V2
 
 ## Introduction
 Welcome to our Airbnb Clone project! This project aims to replicate the functionality of the popular Airbnb platform using Python and SQLAlchemy for database management and modeling. Whether you're a traveler looking for accommodation or a host wanting to list your property, our clone project provides a seamless experience.
